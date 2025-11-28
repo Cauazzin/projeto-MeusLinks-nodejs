@@ -1,310 +1,218 @@
-/* public/style.css */
+/* ===============================
+   Meus Links - Estilo Moderno
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-
-    font-family: Arial, sans-serif;
-
-    margin: 0;
-
-    padding: 20px;
-
-    background-color: #f0f2f5;
-
-    color: #333;
-
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    color: #2c3e50;
+    padding: 25px;
+    min-height: 100vh;
 }
 
-
-
+/* CONTAINER PRINCIPAL */
 .container {
-
     max-width: 700px;
-
-    margin: 0 auto;
-
-    background-color: #fff;
-
-    border-radius: 8px;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
+    margin: auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1);
     overflow: hidden;
-
+    animation: fadeIn 0.5s ease;
 }
 
-
-
+/* HEADER */
 header {
-
-    background-color: #0056b3;
-
-    color: white;
-
-    padding: 20px;
-
+    background: #4f46e5; /* Azul violeta */
+    padding: 30px 20px;
     text-align: center;
-
+    color: white;
+    border-radius: 16px 16px 0 0;
+    box-shadow: inset 0 -4px 6px rgba(0, 0, 0, 0.15);
 }
-
-
 
 header h1 {
-
-    margin: 0;
-
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
-
-
-/* Estilos do Formulário */
-
-.form-container,
-.links-list {
-
-    padding: 20px;
-
+header p {
+    font-size: 1.1rem;
+    opacity: 0.85;
 }
 
+/* FORMULÁRIO */
+.form-container {
+    padding: 30px 25px;
+}
 
+.form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #444;
+}
 
 .form-group {
-
-    margin-bottom: 15px;
-
+    margin-bottom: 18px;
 }
 
-
-
-.form-group label {
-
+label {
     display: block;
-
-    margin-bottom: 5px;
-
-    font-weight: bold;
-
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
 }
 
-
-
-.form-group input {
-
+input[type="text"],
+input[type="url"] {
     width: 100%;
-
-    padding: 10px;
-
-    box-sizing: border-box;
-    /* Garante que o padding não quebre o layout */
-
-    border: 1px solid #ccc;
-
-    border-radius: 4px;
-
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
 }
 
+input[type="text"]:focus,
+input[type="url"]:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 8px #c7d2fe;
+}
 
-
-/* Estilos dos Botões */
-
+/* BOTÕES */
 .btn {
-
-    padding: 10px 15px;
-
-    border: none;
-
-    border-radius: 4px;
-
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 12px;
     cursor: pointer;
-
-    font-weight: bold;
-
-    font-size: 0.9rem;
-
-    transition: background-color 0.2s;
-
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    width: 100%;
+    color: white;
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.4);
 }
-
-
 
 .btn-primary {
-
-    background-color: #007bff;
-
-    color: white;
-
-    width: 100%;
-    /* Botão grande e fácil de tocar no mobile */
-
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
 }
 
 .btn-primary:hover {
-
-    background-color: #0056b3;
-
+    background: linear-gradient(90deg, #4f46e5, #4338ca);
+    transform: translateY(-3px);
 }
 
-
-
 .btn-danger {
-
-    background-color: #dc3545;
-
-    color: white;
-
+    background: linear-gradient(90deg, #ef4444, #b91c1c);
+    box-shadow: 0 6px 15px rgba(239, 68, 68, 0.4);
 }
 
 .btn-danger:hover {
-    background-color: #c82333;
+    background: linear-gradient(90deg, #b91c1c, #991b1b);
+    transform: translateY(-3px);
 }
 
-
-
 .btn-secondary {
-
-    background-color: #6c757d;
-
-    color: white;
-
+    background: linear-gradient(90deg, #6b7280, #4b5563);
+    box-shadow: 0 6px 15px rgba(107, 114, 128, 0.4);
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background: linear-gradient(90deg, #4b5563, #374151);
+    transform: translateY(-3px);
 }
 
-
-
 .btn-success {
-
-    background-color: #28a745;
-
-    color: white;
-
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.4);
 }
 
 .btn-success:hover {
-    background-color: #218838;
+    background: linear-gradient(90deg, #16a34a, #15803d);
+    transform: translateY(-3px);
 }
 
+/* LISTA DE LINKS */
+.links-list {
+    padding: 30px 25px;
+}
 
+.links-list h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
 
-
-
-/*
-
- * A LISTA DE LINKS (Aparência "Linktree")
-
- * Usamos Flexbox para alinhar os itens
-
-*/
-
+/* ITENS DE LINK */
 .link-item,
 .edit-form {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
-    padding: 15px;
-
-    margin-bottom: 10px;
-
-    background-color: #f8f9fa;
-
-    border: 1px solid #e0e0e0;
-
-    border-radius: 5px;
-
+    background: #f3f4f6;
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-
+.link-item:hover,
+.edit-form:hover {
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.2);
+}
 
 .link-item-info {
-
     flex-grow: 1;
-    /* Faz o texto ocupar o máximo de espaço */
-
     overflow: hidden;
-    /* Evita que texto longo quebre o layout */
-
+    padding-right: 12px;
 }
-
-
 
 .link-item-info strong {
-
-    font-size: 1.1rem;
-
-    color: #0056b3;
-
+    font-size: 1.25rem;
+    color: #4f46e5;
+    display: block;
+    margin-bottom: 6px;
 }
-
-
 
 .link-item-info span {
-
-    display: block;
-
-    font-size: 0.9rem;
-
+    font-size: 1rem;
     color: #555;
-
     white-space: nowrap;
-
     overflow: hidden;
-
     text-overflow: ellipsis;
-    /* Adiciona '...' se a URL for muito longa */
-
 }
 
-
-
+/* AÇÕES DOS LINKS (BOTÕES) */
 .link-actions {
-
     flex-shrink: 0;
-    /* Impede que os botões encolham */
-
-    margin-left: 10px;
-
     display: flex;
-
-    gap: 5px;
-    /* Espaço entre os botões */
-
+    gap: 10px;
+    margin-left: 15px;
 }
 
-
-
-/* Formulário de Edição (que substitui o item) */
-
+/* FORMULÁRIO DE EDIÇÃO */
 .edit-form {
-
     flex-direction: column;
-
     align-items: stretch;
-
 }
-
-
 
 .edit-form input {
-
     width: 100%;
-
-}
-
-
-
-.edit-form-actions {
-
-    margin-top: 10px;
-
-    display: flex;
-
-    justify-content: flex-end;
-
-    gap: 10px;
-
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 2px solid #d1d5db;
+    margin-bottom: 12px;
+    transition: bor
 }
